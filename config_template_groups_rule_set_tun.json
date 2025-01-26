@@ -39,7 +39,7 @@
         "address": "223.5.5.5",
         "address_strategy": "ipv4_only",
         "detour": "direct"
-      },
+      }
     ],
     "rules": [
        {
