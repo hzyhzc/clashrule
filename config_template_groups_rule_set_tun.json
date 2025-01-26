@@ -23,12 +23,22 @@
     "servers": [
       {
         "tag": "proxyDns",
-        "address": "tls://8.8.8.8",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "defaultDns",
+        "address_strategy": "ipv4_only",
         "detour": "Proxy"
       },
       {
         "tag": "localDns",
         "address": "https://223.5.5.5/dns-query",
+        "address_resolver": "defaultDns",
+        "detour": "direct"
+      },
+      {
+        "tag": "defaultDns",
+        "address": "223.5.5.5",
+        "address_resolver": "defaultDns",
+        "address_strategy": "ipv4_only",
         "detour": "direct"
       },
       {
@@ -37,14 +47,14 @@
       }
     ],
     "rules": [
+       {
+        "outbound": "any",
+        "server": "defaultDns",
+        "disable_cache": true
+      },
       {
         "rule_set": "geosite-category-ads-all",
         "server": "block"
-      },
-      {
-        "outbound": "any",
-        "server": "localDns",
-        "disable_cache": true
       },
       {
         "rule_set": "geosite-cn",
