@@ -1,12 +1,13 @@
 {
   "log": {
+    "disabled": false,
     "level": "info",
     "timestamp": true
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui": "ui",
+      "external_controller": "0.0.0.0:9095",
+      "external_ui": "/etc/sing-box/ui",
       "secret": "",
       "external_ui_download_url": "https://ghproxy.cn/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
       "external_ui_download_detour": "direct",
@@ -14,6 +15,7 @@
     },
   "cache_file": {
     "enabled": true,
+    "path": "/etc/sing-box/cache.db",
     "store_fakeip": false
     }
   },
