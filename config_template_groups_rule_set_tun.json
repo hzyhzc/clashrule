@@ -30,14 +30,13 @@
       },
       {
         "tag": "localDns",
-        "address": "https://223.5.5.5/dns-query",
+        "address": "223.5.5.5",
         "address_resolver": "defaultDns",
         "detour": "direct"
       },
       {
         "tag": "defaultDns",
         "address": "223.5.5.5",
-        "address_resolver": "defaultDns",
         "address_strategy": "ipv4_only",
         "detour": "direct"
       },
