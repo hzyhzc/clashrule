@@ -40,20 +40,12 @@
         "address_strategy": "ipv4_only",
         "detour": "direct"
       },
-      {
-        "tag": "block",
-        "address": "rcode://success"
-      }
     ],
     "rules": [
        {
         "outbound": "any",
         "server": "defaultDns",
         "disable_cache": true
-      },
-      {
-        "rule_set": "geosite-category-ads-all",
-        "server": "block"
       },
       {
         "rule_set": "geosite-cn",
@@ -81,15 +73,15 @@
       "address": "172.19.0.1/30",
       "mtu": 9000,
       "auto_route": true,
+      "auto_redirect": true,
       "strict_route": true,
-      "sniff": true,
-      "endpoint_independent_nat": false,
       "stack": "system",
+      "sniff": true,
       "platform": {
         "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 2080
+        "enabled": true,
+        "server": "127.0.0.1",
+        "server_port": 2080
         }
       }
     },
