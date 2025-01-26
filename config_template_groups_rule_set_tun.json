@@ -110,6 +110,7 @@
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ],
       "default": "America"
@@ -118,6 +119,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -130,11 +132,13 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ]
     },
@@ -142,6 +146,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -154,6 +159,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -168,6 +174,7 @@
       "outbounds":[
         "direct",
         "HongKong",
+        "AutoHongKong",
         "TaiWan"
       ]
     },
@@ -183,11 +190,13 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ],
       "default": "America"
@@ -196,10 +205,12 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
+        "Oracle",
         "America"
       ],
       "default": "Japan"
@@ -208,6 +219,7 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -220,6 +232,7 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -233,6 +246,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -246,6 +260,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -259,11 +274,13 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ]
     },
@@ -271,11 +288,13 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ]
     },
@@ -283,12 +302,14 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others",
+        "Oracle",
         "direct"
       ]
     },
@@ -307,6 +328,19 @@
         "block",
         "direct"
       ]
+    },
+     {
+      "tag":"AutoHongKong",
+      "type":"urltest",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["(港|HK|hk|Hong Kong|HongKong|hongkong)(?!标准|高级)"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"HongKong",
@@ -356,6 +390,16 @@
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+      ]
+    },
+    {
+      "tag":"Oracle",
+      "type":"selector",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["racle|hzyhzc"]}
       ]
     },
     {
