@@ -73,7 +73,7 @@
         "server": "proxyDns"
       }
     ],
-    "final": "localDns",
+    "final": "defaultDns",
     "strategy": "ipv4_only"
   },
   "inbounds": [
@@ -107,6 +107,9 @@
       "tag":"Proxy",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
+        "HongKong",
+        "Oracle",
         "auto",
         "direct",
         "{all}"
