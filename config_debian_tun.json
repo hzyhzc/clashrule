@@ -30,9 +30,8 @@
       },
       {
         "tag": "localDns",
-        "address": "https://dns.alidns.com/dns-query",
+        "address": "223.5.5.5",
         "address_strategy": "ipv4_only",
-        "address_resolver": "defaultDns",
         "detour": "direct"
       },
       {
