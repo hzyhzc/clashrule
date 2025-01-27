@@ -69,8 +69,8 @@
         "server": "proxyDns"
       },
       {
-      "domain_keyword": [
-                    "javlib"
+      "domain_suffix": [
+                    "javlib.com"
                 ],
         "rule_set": "geosite-geolocation-!cn",
         "server": "proxyDns"
