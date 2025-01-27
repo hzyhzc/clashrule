@@ -523,10 +523,6 @@
         "outbound": "direct"
       },
       {
-        "protocol": "quic",
-        "outbound": "block"
-      },
-      {
         "rule_set": "geosite-openai",
         "outbound": "OpenAI"
       },
