@@ -129,6 +129,20 @@
       "default": "America"
     },
     {
+      "tag":"Youtube",
+      "type":"selector",
+      "outbounds":[
+        "AutoHongKong",
+        "HongKong",
+        "Oracle",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
       "tag":"Google",
       "type":"selector",
       "outbounds":[
@@ -498,7 +512,11 @@
         "outbound": "OpenAI"
       },
       {
-        "rule_set": ["geosite-youtube", "geoip-google", "geosite-google", "geosite-github"],
+        "rule_set": "geosite-youtube",
+        "outbound": "Youtube"
+      },
+      {
+        "rule_set": ["geoip-google", "geosite-google", "geosite-github"],
         "outbound": "Google"
       },
       {
