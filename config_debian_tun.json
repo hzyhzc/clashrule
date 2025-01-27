@@ -784,8 +784,8 @@
       {
         "tag": "geosite-customize",
         "type": "remote",
-        "format": "binary",
-        "url": "https://github.com/hzyhzc/clashrule/raw/main/geosite-customize.srs",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/hzyhzc/clashrule/refs/heads/main/geosite-customize.json",
         "download_detour": "direct"
       },
       {
