@@ -25,20 +25,20 @@
         "tag": "proxyDns",
         "address": "https://1.1.1.1/dns-query",
         "address_resolver": "defaultDns",
-        "address_strategy": "ipv4_only",
+        "address_strategy": "prefer_ipv4",
         "detour": "Proxy"
       },
       {
         "tag": "localDns",
         "address": "https://dns.alidns.com/dns-query",
         "address_resolver": "defaultDns",
-        "address_strategy": "ipv4_only",
+        "address_strategy": "prefer_ipv4",
         "detour": "direct"
       },
       {
         "tag": "defaultDns",
         "address": "223.5.5.5",
-        "address_strategy": "ipv4_only",
+        "address_strategy": "prefer_ipv4",
         "detour": "direct"
       },
        {
@@ -74,7 +74,7 @@
       }
     ],
     "final": "defaultDns",
-    "strategy": "ipv4_only"
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
