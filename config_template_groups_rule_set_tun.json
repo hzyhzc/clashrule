@@ -30,7 +30,7 @@
       },
       {
         "tag": "localDns",
-        "address": "https://doh.pub/dns-query",
+        "address": "https://dns.alidns.com/dns-query",
         "address_strategy": "ipv4_only",
         "address_resolver": "defaultDns",
         "detour": "direct"
