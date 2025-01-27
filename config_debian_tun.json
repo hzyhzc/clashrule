@@ -73,7 +73,7 @@
         "server": "proxyDns"
       }
     ],
-    "final": "defaultDns",
+    "final": "localDns",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
