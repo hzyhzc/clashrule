@@ -1,21 +1,22 @@
 {
   "log": {
+    "disabled": false,
     "level": "info",
     "timestamp": true
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui": "ui",
+      "external_controller": "0.0.0.0:9095",
+      "external_ui": "/etc/sing-box/ui",
       "secret": "",
-      "external_ui_download_url": "https://ghproxy.cn/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "direct",
       "default_mode": "rule"
     },
   "cache_file": {
     "enabled": true,
-    "store_fakeip": true,
-    "store_rdrc": true
+    "path": "/etc/sing-box/cache.db",
+    "store_fakeip": false
     }
   },
   "dns": {
@@ -31,7 +32,7 @@
       },
       {
         "tag": "local",
-        "address": "https://223.5.5.5/dns-query",
+        "address": "tls://223.5.5.5",
         "detour": "direct"
       },
       {
@@ -108,6 +109,7 @@
       ],
       "stack": "system",
       "auto_route": true,
+      "auto_redirect": true,
       "strict_route": true,
       "sniff": true,
       "platform": {
@@ -131,6 +133,9 @@
       "tag":"Proxy",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
+        "HongKong",
+        "Oracle",
         "auto",
         "direct",
         "{all}"
@@ -144,14 +149,30 @@
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ],
       "default": "America"
     },
     {
+      "tag":"Youtube",
+      "type":"selector",
+      "outbounds":[
+        "AutoHongKong",
+        "HongKong",
+        "Oracle",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -164,11 +185,13 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ]
     },
@@ -176,6 +199,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -188,6 +212,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -202,6 +227,7 @@
       "outbounds":[
         "direct",
         "HongKong",
+        "AutoHongKong",
         "TaiWan"
       ]
     },
@@ -217,11 +243,13 @@
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ],
       "default": "America"
@@ -230,10 +258,12 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
+        "Oracle",
         "America"
       ],
       "default": "Japan"
@@ -242,6 +272,7 @@
       "tag":"Netflix",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -254,6 +285,7 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -267,6 +299,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -280,6 +313,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -293,11 +327,13 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ]
     },
@@ -305,11 +341,13 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
+        "Oracle",
         "Others"
       ]
     },
@@ -317,12 +355,14 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
+        "AutoHongKong",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others",
+        "Oracle",
         "direct"
       ]
     },
@@ -341,6 +381,19 @@
         "block",
         "direct"
       ]
+    },
+    {
+      "tag":"AutoHongKong",
+      "type":"urltest",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["(港|HK|hk|Hong Kong|HongKong|hongkong)(?!标准|高级)"]}
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
     },
     {
       "tag":"HongKong",
@@ -390,6 +443,16 @@
       ],
       "filter":[
         {"action":"include","keywords":["🇺🇸|US|us|美国|美|United States"]}
+      ]
+    },
+    {
+      "tag":"Oracle",
+      "type":"selector",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["racle|hzyhzc"]}
       ]
     },
     {
@@ -475,7 +538,11 @@
         "outbound": "OpenAI"
       },
       {
-        "rule_set": ["geosite-youtube", "geoip-google", "geosite-google", "geosite-github"],
+        "rule_set": "geosite-youtube",
+        "outbound": "Youtube"
+      },
+      {
+        "rule_set": ["geoip-google", "geosite-google", "geosite-github"],
         "outbound": "Google"
       },
       {
