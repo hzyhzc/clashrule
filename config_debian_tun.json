@@ -69,7 +69,7 @@
         "server": "proxyDns"
       },
       {
-        "rule_set": "customize",
+        "rule_set": "geosite-customize",
         "server": "proxyDns"
       }, 
       {
@@ -576,7 +576,7 @@
         "outbound": "Streaming"
       },
       {
-        "rule_set": ["geosite-geolocation-!cn", "customize"],
+        "rule_set": ["geosite-geolocation-!cn", "geosite-customize"],
         "outbound": "Global"
       },
       {
@@ -782,10 +782,10 @@
         "download_detour": "direct"
       },
       {
-        "tag": "customize",
+        "tag": "geosite-customize",
         "type": "remote",
         "format": "binary",
-        "url": "https://ghproxy.cn/https://github.com/hzyhzc/clashrule/raw/main/customize.srs",
+        "url": "https://github.com/hzyhzc/clashrule/raw/main/customize.srs",
         "download_detour": "direct"
       },
       {
