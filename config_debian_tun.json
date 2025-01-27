@@ -59,7 +59,11 @@
       {
         "rule_set": "geosite-cn",
         "server": "localDns"
-      },   
+      },
+      {
+        "rule_set": "geosite-customize",
+        "server": "proxyDns"
+      }, 
       {
         "clash_mode": "direct",
         "server": "localDns"
@@ -781,7 +785,7 @@
         "tag": "geosite-customize",
         "type": "remote",
         "format": "binary",
-        "url": "https://github.com/hzyhzc/clashrule/raw/main/customize.srs",
+        "url": "https://github.com/hzyhzc/clashrule/raw/main/geosite-customize.srs",
         "download_detour": "direct"
       },
       {
