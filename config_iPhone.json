@@ -45,7 +45,7 @@
       },
       {
         "outbound": "any",
-        "server": "localDns",
+        "server": "defaultDns",
         "disable_cache": true
       },
       {
@@ -65,7 +65,7 @@
         "server": "proxyDns"
       }
     ],
-    "final": "localDns",
+    "final": "defaultDns",
     "strategy": "ipv4_only"
   },
   "inbounds": [
