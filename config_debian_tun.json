@@ -43,15 +43,13 @@
       },
        {
         "tag": "block",
-        "address": "223.5.5.5",
-        "address_strategy": "prefer_ipv4",
-        "detour": "direct"
+        "address": "rcode://success"
       }
     ],
     "rules": [
       {
         "rule_set": "geosite-category-ads-all",
-        "server": "localDns"
+        "server": "block"
       },
       {
         "outbound": "any",
