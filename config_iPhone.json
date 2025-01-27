@@ -99,6 +99,7 @@
       "outbounds":[
         "AutoHongKong",
         "HongKong",
+        "Oracle",
         "auto",
         "direct",
         "{all}"
