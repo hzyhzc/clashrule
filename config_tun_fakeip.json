@@ -23,7 +23,8 @@
     "fakeip": {
       "enabled": true,
       "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
+      "inet6_range": "fc00::/18",
+      "exclude_rule": { "rule_set": ["fakeip-filter"] }
     },
     "servers": [
       {
@@ -799,6 +800,12 @@
         "format": "binary",
         "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
         "download_detour": "direct"
+      },
+      {
+        "tag": "fakeip-filter",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs"
       },
       {
         "tag": "geosite-geolocation-!cn",
