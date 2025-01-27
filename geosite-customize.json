@@ -2,7 +2,7 @@
   "version": 2,
   "rules": [
     {
-      "omain_suffix": [
+      "domain_suffix": [
         "javlib.com"
       ]
     }
