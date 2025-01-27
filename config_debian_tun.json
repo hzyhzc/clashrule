@@ -25,7 +25,7 @@
         "tag": "proxyDns",
         "address": "https://1.1.1.1/dns-query",
         "address_resolver": "defaultDns",
-        "address_strategy": "prefer_ipv4",
+        "address_strategy": "ipv4_only",
         "detour": "Proxy"
       },
       {
