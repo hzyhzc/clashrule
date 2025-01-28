@@ -345,7 +345,13 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "{all}"
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Oracle",
+        "Others"
       ]
     },
     {
