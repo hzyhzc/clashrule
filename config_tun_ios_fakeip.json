@@ -345,13 +345,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
-        "Oracle",
-        "Others"
+        "{all}"
       ]
     },
     {
@@ -807,7 +801,7 @@
         "tag": "geosite-speedtest",
         "type": "remote",
         "format": "binary",
-        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.srs",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ookla-speedtest.srs",
         "download_detour": "direct"
       },
       {
