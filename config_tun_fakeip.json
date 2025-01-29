@@ -352,6 +352,14 @@
       ]
     },
     {
+      "tag":"Speedtest",
+      "type":"selector",
+      "outbounds":[
+        "direct",
+        "{all}"
+      ]
+    },
+    {
       "tag":"Global",
       "type":"selector",
       "outbounds":[ 
@@ -598,6 +606,10 @@
         "outbound": "Streaming"
       },
       {
+        "rule_set": "geosite-speedtest",
+        "outbound": "Speedtest"
+      },
+      {
         "rule_set": "geosite-geolocation-!cn",
         "outbound": "Global"
       },
@@ -794,6 +806,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-speedtest",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ookla-speedtest.srs",
         "download_detour": "direct"
       },
       {
