@@ -14,6 +14,7 @@ tcp-concurrent: true
 global-client-fingerprint: chrome
 sniffer:
   enable: true
+  parse-pure-ip: true
   sniff:
     HTTP:
       ports: [80, 8080-8880]
