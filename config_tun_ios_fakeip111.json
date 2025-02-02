@@ -29,17 +29,9 @@
       {
         "tag": "fakeip",
         "address": "fakeip"
-      },
-      {
-        "tag": "block",
-        "address": "rcode://success"
       }
     ],
     "rules": [
-      {
-        "rule_set": "geosite-category-ads-all",
-        "server": "block"
-      },
       {
         "outbound": "any",
         "server": "local"
@@ -492,8 +484,14 @@
         "action": "hijack-dns"
       },
       {
-        "rule_set": "geosite-category-ads-all",
-        "action": "reject"
+          "rule_set": "geosite-category-ads-all",
+          "clash_mode": "rule",
+          "action": "reject"
+      },
+      {
+          "rule_set": "geosite-category-ads-all",
+          "clash_mode": "global",
+          "outbound": "Proxy"
       },
       {
         "clash_mode": "direct",
