@@ -104,6 +104,7 @@
             "api.map.baidu.com",
             "loc.map.baidu.com",
             "*.bankcomm.cn",
+            "*.bankcomm.com",
             "*.boc.cn",
             "*.pingan.com.cn"
           ]
