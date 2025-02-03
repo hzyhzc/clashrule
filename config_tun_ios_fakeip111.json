@@ -99,7 +99,7 @@
           "server_port": 7890,
           "bypass_domain": [
             "*.abchina.com.cn",
-            "*.baidu.com",
+            "*.baidu.com"
           ]
         }
       }
