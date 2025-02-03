@@ -98,8 +98,10 @@
           "server": "127.0.0.1",
           "server_port": 7890,
           "bypass_domain": [
-            "*.abchina.com",
-            "*.pingan.com"
+            "*.abchina.com.cn",
+            "*.bankcomm.cn",
+            "*.boc.cn",
+            "*.pingan.com.cn"
           ]
         }
       }
