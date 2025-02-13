@@ -801,7 +801,7 @@
         "tag": "geosite-speedtest",
         "type": "remote",
         "format": "binary",
-        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-ookla-speedtest.srs",
+        "url": "https://ghproxy.cn/https://github.com/hzyhzc/sing-box-geosite/raw/main/rule/Speedtest.srs",
         "download_detour": "direct"
       },
       {
