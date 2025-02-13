@@ -595,6 +595,9 @@
         "outbound": "Streaming"
       },
       {
+        "domain_keyword": [
+          "speedtest"
+        ],
         "rule_set": "geosite-speedtest",
         "outbound": "Speedtest"
       },
@@ -800,8 +803,8 @@
       {
         "tag": "geosite-speedtest",
         "type": "remote",
-        "format": "source",
-        "url": "https://github.com/hzyhzc/sing-box-geosite/raw/main/rule/Speedtest.json",
+        "format": "binary",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ookla-speedtest.srs",
         "download_detour": "direct"
       },
       {
