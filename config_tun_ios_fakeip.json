@@ -800,8 +800,8 @@
       {
         "tag": "geosite-speedtest",
         "type": "remote",
-        "format": "binary",
-        "url": "https://github.com/hzyhzc/sing-box-geosite/raw/main/rule/Speedtest.srs",
+        "format": "source",
+        "url": "https://github.com/hzyhzc/sing-box-geosite/raw/main/rule/Speedtest.json",
         "download_detour": "direct"
       },
       {
