@@ -603,11 +603,8 @@
           },
           {
             "headers": {
-               "User-Agent": ["SpeedTest*"]
+               "User-Agent": ["SpeedTest"]
           }
-          },
-          {
-           "rule_set": "geosite-speedtest", 
           }
         ],
         "outbound": "Speedtest"
