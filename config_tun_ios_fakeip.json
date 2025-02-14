@@ -608,7 +608,7 @@
           },
           {
            "rule_set": "geosite-speedtest", 
-          },
+          }
         ],
         "outbound": "Speedtest"
       },
