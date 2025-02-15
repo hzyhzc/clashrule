@@ -595,15 +595,10 @@
         "outbound": "Streaming"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules":[
-          {
-            "headers": {
-               "User-Agent": ["SpeedTest"]
-          }
-          }
+        "domain_keyword": [
+          "speedtest"
         ],
+        "rule_set": "geosite-speedtest",
         "outbound": "Speedtest"
       },
       {
