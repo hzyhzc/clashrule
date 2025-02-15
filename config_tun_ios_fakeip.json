@@ -599,9 +599,6 @@
         "mode": "or",
         "rules":[
           {
-            "domain_keyword":["speedtest"]
-          },
-          {
             "headers": {
                "User-Agent": ["SpeedTest"]
           }
