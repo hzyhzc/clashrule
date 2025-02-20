@@ -338,6 +338,7 @@
       "tag":"Emby",
       "type":"selector",
       "outbounds":[
+        "direct",
         "AutoHongKong",
         "HongKong",
         "TaiWan",
