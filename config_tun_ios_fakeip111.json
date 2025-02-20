@@ -335,6 +335,20 @@
       ]
     },
     {
+      "tag":"Emby",
+      "type":"selector",
+      "outbounds":[
+        "AutoHongKong",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Oracle",
+        "Others"
+      ]
+    },
+    {
       "tag":"Speedtest",
       "type":"selector",
       "outbounds":[
@@ -577,6 +591,10 @@
         "outbound": "Streaming"
       },
       {
+        "rule_set": "geosite-emby",
+        "outbound": "Emby"
+      },
+      {
         "rule_set": "geosite-speedtest",
         "outbound": "Speedtest"
       },
@@ -791,6 +809,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ookla-speedtest.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-emby",
+        "type": "remote",
+        "format": "source",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/hzyhzc/clashrule/main/ruleset/emby.list",
         "download_detour": "direct"
       },
       {
