@@ -47,7 +47,7 @@ proxy-groups:
   - {name: Ⓜ️ Microsoft, <<: *pr}
   - {name: 🎵 TikTok, <<: *pr}
   - {name: 📲 Telegram, <<: *pr}
-  - {name: 𝕏 Twitter, <<: *pr}  
+  - {name: 📺 Twitter, <<: *pr}  
   - {name: 🎥 NETFLIX, <<: *pr}
   - {name: 📺 EMBY, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
@@ -86,7 +86,7 @@ rules:
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,speedtest_domain,✈️ Speedtest
   - RULE-SET,telegram_domain,📲 Telegram
-  - RULE-SET,twitter_domain,𝕏 Twitter
+  - RULE-SET,twitter_domain,📺 Twitter
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,emby_domain,📺 EMBY
   - RULE-SET,paypal_domain,💶 PayPal
