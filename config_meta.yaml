@@ -47,6 +47,7 @@ proxy-groups:
   - {name: Ⓜ️ Microsoft, <<: *pr}
   - {name: 🎵 TikTok, <<: *pr}
   - {name: 📲 Telegram, <<: *pr}
+  - {name: 𝕏 Twitter, <<: *pr}  
   - {name: 🎥 NETFLIX, <<: *pr}
   - {name: 📺 EMBY, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
@@ -85,6 +86,7 @@ rules:
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,speedtest_domain,✈️ Speedtest
   - RULE-SET,telegram_domain,📲 Telegram
+  - RULE-SET,twitter_domain,𝕏 Twitter
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,emby_domain,📺 EMBY
   - RULE-SET,paypal_domain,💶 PayPal
@@ -109,6 +111,7 @@ rule-providers:
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs" }
   github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs" }
   telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs" }
+  twitter_domain: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list" }
   netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs" }
   emby_domain: { <<: *class, url: "https://raw.githubusercontent.com/hzyhzc/clashrule/main/ruleset/emby.list" }
   paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs" }
