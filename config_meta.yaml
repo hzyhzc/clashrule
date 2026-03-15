@@ -76,6 +76,7 @@ rules:
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,direct1,🟢 直连
   - RULE-SET,apple_domain,🍎 Apple
+  - RULE-SET,apple_ip,🍎 Apple
   - RULE-SET,proxylite,🔗 GlobalDNS
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
@@ -128,3 +129,4 @@ rule-providers:
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs" }
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs" }
+  apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
