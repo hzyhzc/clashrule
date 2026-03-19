@@ -9,27 +9,6 @@ proxy-providers:
     proxy: 🟢 直连
     url: "http://192.168.5.11:3001/2cXaAxRGfhzmGz2yx1wA/download/collection/JC?target=ClashMeta"
 
-unified-delay: true
-tcp-concurrent: true
-global-client-fingerprint: chrome
-sniffer:
-  enable: true
-  force-dns-mapping: true
-  parse-pure-ip: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  skip-domain:
-    - "Mijia Cloud"
-    - "dlg.io.mi.com"
-    - "+.push.apple.com"
-    - "+.apple.com"
-
 proxies:
 - name: "🟢 直连"
   type: direct
