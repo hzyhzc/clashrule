@@ -7,7 +7,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: "http://192.168.5.10:3001/2cXaAxRGfhzmGz2yx1wA/download/collection/JC?target=ClashMeta"
+    url: "http://192.168.5.11:3001/2cXaAxRGfhzmGz2yx1wA/download/collection/JC?target=ClashMeta"
 
 unified-delay: true
 tcp-concurrent: true
