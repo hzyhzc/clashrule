@@ -49,11 +49,11 @@ proxy-groups:
   - {name: Oracle节点, type: select, include-all: true, filter: "racle|hzyhzc"}
   - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: 🔯 香港负载均衡, type: smart, uselightgbm: false, collectdata: false, include-all: true, interval: 300, filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong))(?:(?!标准|高级|家|0).)*$"}
-  - {name: ♻️ 香港智能, type: smart, uselightgbm: false, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong))(?:(?!标准|高级|家).)*$"}
-  - {name: ♻️ 日本智能, type: smart, uselightgbm: false, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: ♻️ 美国智能, type: smart, uselightgbm: false, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-  - {name: ♻️ 智能选择, type: smart, uselightgbm: false, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🔯 香港负载均衡, type: smart, uselightgbm: true, collectdata: false, include-all: true, interval: 300, filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong))(?:(?!标准|高级|家|0).)*$"}
+  - {name: ♻️ 香港智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong))(?:(?!标准|高级|家).)*$"}
+  - {name: ♻️ 日本智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: ♻️ 美国智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+  - {name: ♻️ 智能选择, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
 rules:
   - RULE-SET,private_domain,🟢 直连
