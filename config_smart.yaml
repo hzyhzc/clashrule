@@ -18,7 +18,7 @@ proxies:
   type: direct
   udp: true
 
-pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 香港故转, 🔯 日本故转, 🔯 香港负载均衡, ♻️ 香港智能, ♻️ 日本智能, ♻️ 美国智能, ♻️ 智能选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇰🇷 韩国节点, Oracle节点, 🌐 全部节点, 🟢 直连]}
+pr: &pr {type: select, proxies: [🚀 节点选择, 🔯 香港故转, 🔯 日本故转, 🔯 香港负载均衡, ♻️ 香港智能, ♻️ 狮城智能, ♻️ 日本智能, ♻️ 美国智能, ♻️ 智能选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇰🇷 韩国节点, Oracle节点, 🌐 全部节点, 🟢 直连]}
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 香港负载均衡, ♻️ 香港智能, ♻️ 日本智能, ♻️ 美国智能, ♻️ 智能选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇰🇷 韩国节点, Oracle节点, 🌐 全部节点, 🟢 直连]}
@@ -51,6 +51,7 @@ proxy-groups:
   - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
   - {name: 🔯 香港负载均衡, type: smart, uselightgbm: true, collectdata: false, include-all: true, interval: 300, filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong))(?:(?!标准|高级|家|0).)*$"}
   - {name: ♻️ 香港智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong))(?:(?!标准|高级|家).)*$"}
+  - {name: ♻️ 狮城智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore))(?:(?!标准|高级|家).)*$"}
   - {name: ♻️ 日本智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
   - {name: ♻️ 美国智能, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
   - {name: ♻️ 智能选择, type: smart, uselightgbm: true, collectdata: false, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
