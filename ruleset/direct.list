@@ -2,5 +2,5 @@
 
 # 域名后缀匹配
 DOMAIN-SUFFIX,baidu.com
-#DOMAIN-KEYWORD,huacloud
+DOMAIN-KEYWORD,huacloud
 
